@@ -12,7 +12,8 @@ describe('DiscountService', () => {
         test.each([
             [null],
             [undefined],
-            ['100']
+            ['100'],
+            [isNaN]
         ])
             ('deve lançar erro para valor inválido: %p',
             (valorInvalido) => {
@@ -50,5 +51,3 @@ describe('DiscountService', () => {
         );
     });
 });
-
-
